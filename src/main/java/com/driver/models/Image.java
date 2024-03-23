@@ -12,19 +12,27 @@ public class Image {
     @JoinColumn
     @ManyToOne
     private Blog blog;
-    private String dimensions;
+    private String dimension;
     private String description;
 
-    public Image( Blog blog, String dimensions,String description) {
+    public Image( Blog blog, String dimension,String description) {
         this.blog = blog;
-        this.dimensions = dimensions;
+        this.dimension = dimension;
         this.description=description;
     }
 
     public Image() {
         this.blog=null;
-        this.dimensions=null;
+        this.dimension=null;
         this.description=null;
+    }
+
+    public String getDimension() {
+        return dimension;
+    }
+
+    public void setDimension(String dimension) {
+        this.dimension = dimension;
     }
 
     public Integer getImageId() {
@@ -43,13 +51,7 @@ public class Image {
         this.blog = blog;
     }
 
-    public String getDimensions() {
-        return dimensions;
-    }
 
-    public void setDimensions(String dimensions) {
-        this.dimensions = dimensions;
-    }
 
     public String getDescription() {
         return description;
