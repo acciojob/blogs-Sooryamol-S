@@ -31,7 +31,9 @@ public class Image {
         return imageId;
     }
 
-
+    public void setImageId(Integer imageId) {
+        this.imageId = imageId;
+    }
 
     public Blog getBlog() {
         return blog;
@@ -41,11 +43,11 @@ public class Image {
         this.blog = blog;
     }
 
-    public String getDimension() {
+    public String getDimensions() {
         return dimensions;
     }
 
-    public void setDimension(String dimensions) {
+    public void setDimensions(String dimensions) {
         this.dimensions = dimensions;
     }
 
