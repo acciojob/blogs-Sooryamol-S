@@ -9,7 +9,7 @@ import java.util.List;
 public class User {
     @Id
     @GeneratedValue(strategy= GenerationType.IDENTITY)
-    private Integer userId;
+    private Integer id;
     private String userName;
     private String password;
     @OneToMany(mappedBy = "user,cascade=CascadeType.all")
@@ -28,17 +28,19 @@ public class User {
         this.userName=userName;
         this.password=password;
     }
+
+
     public User(){
         this.userName=null;
         this.password=null;
     }
 
-    public Integer getUserId() {
-        return userId;
+    public Integer getId() {
+        return id;
     }
 
-    public void setUserId(Integer userId) {
-        this.userId = userId;
+    public void setId(Integer id) {
+        this.id = id;
     }
 
     public String getUserName() {
