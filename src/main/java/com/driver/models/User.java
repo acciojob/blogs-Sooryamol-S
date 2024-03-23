@@ -14,13 +14,13 @@ public class User {
     private String password;
     @OneToMany(mappedBy = "user,cascade=CascadeType.all")
 
-    private List<Image> blogList=new ArrayList<>();
+    private List<Blog> blogList=new ArrayList<>();
 
-    public List<Image> getBlogList() {
+    public List<Blog> getBlogList() {
         return blogList;
     }
 
-    public void setBlogList(List<Image> blogList) {
+    public void setBlogList(List<Blog> blogList) {
         this.blogList = blogList;
     }
 
